@@ -22,7 +22,7 @@ This system is a Java-based application developed for Qassim University to manag
     * Applied Exception Handling for robust file I/O.
     * Documentation: Technical explanation of file management.
 
-### 3. Remas
+### 3. Reemas
 * Role: Feature Developer (Reporting & Tasks)
 * Tasks:
     * Developed the ReportGenerator class (Reports by GPA, Department, Year).
