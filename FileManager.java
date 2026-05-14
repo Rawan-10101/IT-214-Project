@@ -14,4 +14,7 @@ public class FileManager {
         writer.write(s.getId() + "," + s.getName() + "," + s.getGpa() + "," + s.getDepartment() + "," + s.getYear());
         writer.newLine();
     } 
+      writer.close();
+    System.out.println("Saved successfully!");
+}
 }
