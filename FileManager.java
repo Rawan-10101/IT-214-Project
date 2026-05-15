@@ -17,4 +17,11 @@ public class FileManager {
       writer.close();
     System.out.println("Saved successfully!");
 }
+public List<Student> loadStudents() throws IOException {
+    List<Student> students = new ArrayList<>();
+    File file = new File(fileName);
+    if (!file.exists()) {
+        throw new FileNotFoundException("File not found: " + fileName);
+    }
+
 }
