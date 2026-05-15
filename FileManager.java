@@ -23,5 +23,14 @@ public List<Student> loadStudents() throws IOException {
     if (!file.exists()) {
         throw new FileNotFoundException("File not found: " + fileName);
     }
-
+ BufferedReader reader = new BufferedReader(new FileReader(fileName));
+    String line;
+    while ((line = reader.readLine()) != null) {
+        String[] parts = line.split(",");
+        Student s = new Student(parts[0], parts[1], Double.parseDouble(parts[2]), parts[3], Integer.parseInt(parts[4]));
+        students.add(s);
+    }
+    reader.close();
+    return students;
+}
 }
