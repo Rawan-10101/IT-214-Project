@@ -33,4 +33,7 @@ public List<Student> loadStudents() throws IOException {
     reader.close();
     return students;
 }
+public void deleteStudent(List<Student> students, String id) throws IOException {
+    students.removeIf(s -> s.getId().equals(id));
+}
 }
