@@ -11,7 +11,7 @@ public class FileManager {
    public void saveStudents(List<Student> students) throws IOException {
     BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
     for (Student s : students) {
-        writer.write(s.getId() + "," + s.getName() + "," + s.getGpa() + "," + s.getDepartment() + "," + s.getYear());
+        writer.write(s.getStudentId() + "," + s.getName() + "," + s.getGpa() + "," + s.getDepartment() + "," + s.getYear());
         writer.newLine();
     } 
       writer.close();
@@ -34,14 +34,14 @@ public List<Student> loadStudents() throws IOException {
     return students;
 }
 public void deleteStudent(List<Student> students, String id) throws IOException {
-    students.removeIf(s -> s.getId().equals(id));
+    students.removeIf(s -> s.getStudentId().equals(id));
     saveStudents(students);
 System.out.println("Deleted successfully!");
 }
 
 public void updateStudent(List<Student> students, String id, String newName, double newGpa) throws IOException {
     for (Student s : students) {
-        if (s.getId().equals(id)) {
+        if (s.getStudentId().equals(id)) {
             s.setName(newName);
             s.setGpa(newGpa);
             break;
