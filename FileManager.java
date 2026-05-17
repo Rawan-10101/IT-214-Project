@@ -39,4 +39,15 @@ public void deleteStudent(List<Student> students, String id) throws IOException 
 System.out.println("Deleted successfully!");
 }
 
+public void updateStudent(List<Student> students, String id, String newName, double newGpa) throws IOException {
+    for (Student s : students) {
+        if (s.getId().equals(id)) {
+            s.setName(newName);
+            s.setGpa(newGpa);
+            break;
+        }
+    }
+    saveStudents(students);
+    System.out.println("Updated successfully!");
+}
 }
