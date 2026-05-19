@@ -7,8 +7,7 @@ public class GraduateStudent extends Student {
     public GraduateStudent(String studentId, String name, double gpa, String department, int year, String thesisTitle, String supervisor) {
         super(studentId, name, gpa, department, year);
         this.thesisTitle = thesisTitle;
-        this.supervisor = supervisor;
-    }
+        this.supervisor = supervisor; }
 
     public String getThesisTitle() { return thesisTitle; }
     public String getSupervisor() { return supervisor; }
@@ -20,11 +19,9 @@ public class GraduateStudent extends Student {
     public String displayInfo() {
         return super.displayInfo() + 
                " | Thesis: " + thesisTitle + 
-               " | Supervisor: " + supervisor;
-    }
+               " | Supervisor: " + supervisor; }
 
     @Override
     public String toFileString() {
-        return super.toFileString() + "," + thesisTitle + "," + supervisor;
-    }
+        return super.toFileString() + "," + thesisTitle + "," + supervisor; }
 }
